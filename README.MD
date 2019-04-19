@@ -11,6 +11,10 @@ To run test use
 
   - `npm run test`.
 
+To lint code run:
+
+  - `npm run lint`.
+
 ### Tech Stack
 
  - ReactJS 16
