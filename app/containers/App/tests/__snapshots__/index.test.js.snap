@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render and match the snapshot 1`] = `
+<ForwardRef>
+  <HelmetWrapper
+    defaultTitle="Music App"
+    defer={true}
+    encodeSpecialCharacters={true}
+    titleTemplate="Music App"
+  >
+    <meta
+      content="Music when it hit your soul, you feel no pain!"
+      name="description"
+    />
+  </HelmetWrapper>
+  <Header />
+  <Switch>
+    <Route
+      component={[Function]}
+      path="/composition"
+    />
+    <Route
+      component={[Function]}
+      path="/recording"
+    />
+  </Switch>
+  <GlobalStyleComponent
+    suppressMultiMountWarning={false}
+  />
+</ForwardRef>
+`;
