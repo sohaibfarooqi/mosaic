@@ -14,7 +14,7 @@ import request from 'utils/request';
  * Composition GET request/response handler
  */
 export function* getComposition() {
-  const requestURL = `http://localhost:8000/composition/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/`;
   try {
     // Call our request helper (see 'utils/request')
     const compositions = yield call(request, requestURL);
@@ -28,7 +28,7 @@ export function* getComposition() {
  * Composition POST request/response handler
  */
 export function* createComposition(action) {
-  const requestURL = `http://localhost:8000/composition/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/`;
   let reqBody = {
     method: 'POST',
     body: JSON.stringify(action.payload),
@@ -48,7 +48,7 @@ export function* createComposition(action) {
  */
 export function* updateComposition(action) {
   let id = action.id
-  const requestURL = `http://localhost:8000/composition/${id}/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/${id}/`;
   let reqBody = {
     method: 'PUT',
     body: JSON.stringify(action.payload),
@@ -68,7 +68,7 @@ export function* updateComposition(action) {
  */
 export function* deleteComposition(action) {
   let id = action.id
-  const requestURL = `http://localhost:8000/composition/${id}/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/${id}/`;
   let reqBody = {
     method: 'DELETE',
     headers: {'Content-Type': 'application/json'}
