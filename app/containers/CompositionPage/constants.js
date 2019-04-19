@@ -1,0 +1,3 @@
+/*
+This file can be used to define CompositionPage specific actions.
+*/
