@@ -14,7 +14,7 @@ import request from 'utils/request';
  * Recording GET request/response handler
  */
 export function* getRecording() {
-  const requestURL = `http://localhost:8000/recording/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/`;
   try {
     // Call our request helper (see 'utils/request')
     const recordings = yield call(request, requestURL);
@@ -28,7 +28,7 @@ export function* getRecording() {
  * Recording POST request/response handler
  */
 export function* createRecording(action) {
-  const requestURL = `http://localhost:8000/recording/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/`;
   let reqBody = {
     method: 'POST',
     body: JSON.stringify(action.payload),
@@ -48,7 +48,7 @@ export function* createRecording(action) {
  */
 export function* updateRecording(action) {
   let id = action.id
-  const requestURL = `http://localhost:8000/recording/${id}/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/${id}/`;
   let reqBody = {
     method: 'PUT',
     body: JSON.stringify(action.payload),
@@ -68,7 +68,7 @@ export function* updateRecording(action) {
  */
 export function* deleteRecording(action) {
   let id = action.id
-  const requestURL = `http://localhost:8000/recording/${id}/`;
+  const requestURL = `${process.env.API_URL}/${ENDPOINT}/${id}/`;
   let reqBody = {
     method: 'DELETE',
     headers: {'Content-Type': 'application/json'}
