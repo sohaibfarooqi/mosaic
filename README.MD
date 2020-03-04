@@ -1,4 +1,4 @@
-# Frontend
+# Mosaic
 This app implements frontend of Music meta data management.
 
 ### Installation and Running
